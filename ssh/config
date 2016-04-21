@@ -1,0 +1,106 @@
+# Default user(teddy.hongchao@gmail.com)
+Host github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+# HDF Gitlab user HongChao(hongchao@haodf.com)
+Host git_uco
+HostName git.uco.com
+User git
+Port 51022
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/uco_rsa
+
+# Work dev(hongchao@haodf.com)
+Host uco_dev
+HostName 10.88.43.238
+User teddy
+Port 22
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+# Work test(hongchao@haodf.com)
+Host test_Cloud
+HostName hongchao1-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+# logger(hongchao@haodf.com)
+Host Logger
+HostName 10.3.6.87
+User logger
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+#Work IOS user(hongchao@haodf.com)
+Host work_IOS
+HostName git1.bj1.haodf.net
+User git
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+#Bitbucket(teddy.hongchao@gmail.com)
+Host bitbucket
+HostName bitbucket.org
+User git
+Port 22
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/id_rsa
+
+#Gitlab(teddy.hongchao@gmail.com)
+# Host gitlab
+# HostName gitlab.com
+# User git
+# Port 22
+# PubkeyAuthentication yes
+# IdentityFile ~/.ssh/id_rsa
+
+
+
+Host test1
+HostName hongchao15-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+Host test2
+HostName hongchao14-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+Host test3
+HostName hongchao13-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+Host test4
+HostName hongchao12-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+Host test5
+HostName hongchao11-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+
+Host test6
+HostName hongchao10-test.bj1.haodf.net
+User dev
+Port 5860
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/work_rsa
+

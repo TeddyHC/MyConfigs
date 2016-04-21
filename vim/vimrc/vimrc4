@@ -1,0 +1,239 @@
+"""""""""""""""""""""""""""""""""""""""
+" URL: https://gist.github.com/alvin2ye/318212
+" 安装方法 
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" curl -sL https://gist.githubusercontent.com/alvin2ye/318212/raw/.vimrc > ~/.vimrc
+" Launch vim, run :BundleInstall 
+"""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""
+"平台判断
+"""""""""""""""""""""""""""""""""""""""
+function! MySys()
+    if has("win32")
+        return "windows"
+    else
+        return "linux"
+    endif
+endfunction
+
+" EatChar
+function! EatChar(pat)
+    let c = nr2char(getchar(0))
+    return (c =~ a:pat) ? '' : c
+endfunction
+
+" MakeSpacelessIabbrev
+
+function! MakeSpacelessIabbrev(from, to)
+    execute "iabbrev <silent> ".a:from." ".a:to."<C-R>=EatChar('\\s')<CR>"
+endfunction
+function! MakeSpacelessBufferIabbrev(from, to)
+    execute "iabbrev <silent> <buffer> ".a:from." ".a:to."<C-R>=EatChar('\\s')<CR>"
+endfunction
+
+call MakeSpacelessIabbrev('utf8@',  '# -*- encoding : utf8 -*-')
+
+
+" Use windows fileformat
+
+function! WinFormat()
+    set fileencoding=gb2312
+    set fileformat=dos
+endfunction
+"""""""""""""""""""""""""""""""""""""""
+"Gerneral
+"""""""""""""""""""""""""""""""""""""""
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" 编辑vimrc之后，重新加载
+if MySys() == "windows"
+    autocmd! bufwritepost _vimrc source ~/_vimrc
+else
+    autocmd! bufwritepost .vimrc source ~/.vimrc
+endif
+
+" 禁用Vi的兼容模式
+set nocompatible
+
+" Set windows postion and size
+if has("gui_running")
+    "winpos 0 0
+    "set lines=43
+    "set columns=85
+    set guioptions -=m
+    set guioptions -=T
+    set guioptions -=L
+    set guioptions -=r
+    "set showtabline=0
+endif
+
+" 设定状态栏多显示信息
+set laststatus=2
+
+"if exists('+autochdir')
+" " 文件路径设置为当前路径
+" set autochdir
+"endif
+
+"auto save zz info
+au BufWinLeave *.* silent mkview
+au BufWinEnter *.* silent loadview
+
+"""""""""""""""""""""""""""""""""""""""
+"Vundle
+"""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" My Bundles here:
+
+" vim-scripts repos
+
+" Bundle 'vitality'
+Plugin 'gmarik/vundle'
+
+" Syntax
+Plugin 'alswl/html5.vim'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-markdown'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'docunext/closetag.vim'
+
+" Color
+
+"Plugin 'Yggdroot/indentLine' 
+Plugin 'desert256.vim'
+Plugin 'Impact'
+Plugin 'matrix.vim'
+Plugin 'vibrantink'
+Plugin 'vividchalk.vim'
+Plugin 'spring.vim'
+Plugin 'candycode.vim'
+Plugin 'ego.vim'
+
+" Ftplugin
+
+" Indent
+"Plugin 'indent/html.vim'
+Plugin 'IndentAnything'
+Plugin 'Javascript-Indentation'
+Plugin 'mako.vim--Torborg'
+
+" Plugin
+Plugin 'The-NERD-tree'
+Plugin 'AutoClose--Alves'
+Plugin 'auto_mkdir'
+Plugin 'cecutil'
+" 解决vim输入中文的痛苦
+" Plugin 'fcitx.vim'
+" 自动检测编码格式的能力，但是有时不是很准
+Plugin 'FencView.vim'
+" js代码整理
+Plugin 'jsbeautify'
+Plugin 'L9'
+" 光亮部分代码
+Plugin 'Mark'
+Plugin 'mru.vim'
+" 代码注释 \cc \cu
+Plugin 'The-NERD-Commenter'
+Plugin 'restart.vim'
+Plugin 'taglist.vim'
+Plugin 'css_color.vim'
+Plugin 'hallettj/jslint.vim'
+" 源代码版本控制
+Plugin 'vcscommand.vim'
+" Plugin 'snipMate'
+Plugin 'TaskList.vim'
+Plugin 'sontek/rope-vim'
+Plugin 'project.tar.gz'
+Plugin 'matchit.zip'
+
+
+" 快速找文件
+Plugin 'kien/ctrlp.vim'
+
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.yardoc/*,*.exe,*.so,*.dat
+
+" unlet g:ctrlp_custom_ignore
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$',
+            \ 'file': '\.exe$\|\.so$\|\.dat$'
+            \ }
+
+Plugin 'Yggdroot/indentLine' " 自动树线
+" let g:indentLine_char = '|'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+Plugin 'rizzatti/dash.vim'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+
+" 代码排列
+Plugin 'godlygeek/tabular'
+
+" . 支持插件命令
+Plugin 'tpope/vim-repeat'
+Plugin 'bufexplorer.zip'
+
+" 控制 两边符号插入或者替换
+Plugin 'tpope/vim-surround'
+
+" 保存前自动删除末尾空格
+" Plugin 'dongweiming/vary.vim'
+
+set tabstop=2 " <tab> inserts 4 spaces
+let g:auto_striptrail = "python,ruby" " Set want to automatically remove
+let g:auto_striptab = "python,ruby,cpp" " Set automatically converted 
+
+"""""""""""""""""""""""""""""""""""""""
+"VIM user interface
+"""""""""""""""""""""""""""""""""""""""
+" use chinese help
+"set helplang=cn
+
+"set the menu & the message to English
+set langmenu=en_US
+let $LANG="en_US.UTF-8"
+
+set ruler "右下角显示当前光标
+
+"set cmdheight=2 "The commandbar height
+
+" Set backspace config
+set backspace=eol,start,indent
+"set whichwrap+=<,>,h,l
+
+set ignorecase "Ignore case when searching
+set smartcase
+"set nowrapscan
+
+" 使用正统的搜索正则
+"nnoremap / /\v
+"vnoremap / /\v
+
+set hlsearch "Highlight search things
+
+set incsearch "在输入部分查找模式时显示相应的匹配点。
+"set nolazyredraw "Don't redraw while executing macros
+
+set magic "Set magic on, for regular expressions
+
+set showmatch "Show matching bracets when text indicator is over them
+
+set sidescroll=10 "左右移动边距
+
+"set list " 显示制表符/回车符
+set listchars=tab:>-,trail:$ " 行
