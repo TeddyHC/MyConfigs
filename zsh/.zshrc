@@ -59,7 +59,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -98,7 +98,7 @@ alias vi='vim'
 # open file
 #--------------------------------------------------------------------
 
-# alias -s php=vim
+alias -s php=vim
 alias -s py=vim
 alias -s c=vim
 
@@ -110,6 +110,10 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
+
+#--------------------------------------------------------------------
+# short orders
+#--------------------------------------------------------------------
 
 #高版本git
 alias git="/usr/local/bin/git"
@@ -128,9 +132,5 @@ alias hosts='sudo vim /etc/hosts'
 #--------------------------------------------------------------------
 
 alias gwork="ssh uco_dev"
-alias gtest="gssh ssh test_Cloud"
-alias logger='gssh ssh Logger'
-alias gyang='gssh ssh yangyang_Cloud'
 
-alias mysqlonline='mycli -hrecoverdb1-dev.bj1.haodf.net -uhdf -p'
 alias mysql15='mycli -hdb15-dev.bj1.haodf.net -uhdf -p'
