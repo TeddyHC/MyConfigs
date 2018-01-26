@@ -73,6 +73,8 @@ Plugin 'pbrisbin/vim-mkdir'
 " Plugin 'nelsyeung/twig.vim'
 Plugin 'lumiliet/vim-twig'
 
+Plugin 'fatih/vim-go'
+
 "--------------------------------------------------------------------
 " vim-scripts repos on github
 "--------------------------------------------------------------------
