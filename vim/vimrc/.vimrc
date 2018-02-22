@@ -28,10 +28,10 @@ endif
 " 持久撤销文件存放目录
 " exec 'set undodir='.fnameescape(g:vimrc_home.'/.vim_undo/')
 
-"字体 
-if (has("gui_running")) 
+"字体
+if (has("gui_running"))
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
-endif 
+endif
 
 if has('gui_running') && $LANG !~ '\.'
     set encoding=utf-8
@@ -46,7 +46,7 @@ set shortmess=at
 "style
 colorscheme molokai
 
-" 用jj代替ESC 
+" 用jj代替ESC
 inoremap jj <ESC>
 
 "把所有的数字都当成十进制，防止八进制和16进制干扰
@@ -77,7 +77,7 @@ set wildmode=longest,list
 
 "让回溯命令历史时的快捷键拥有up和down一样对历史命令进行过滤的优点
 " cnoremap <C-p> <Up>
-cnoremap <C-n> <Down> 
+cnoremap <C-n> <Down>
 
 set nomore
 
@@ -96,13 +96,13 @@ nnoremap k gk
 "  edit model move cursor
 "--------------------------------------------------------------------
 
-imap <C-e> <END> 
-imap <C-a> <HOME> 
-imap <C-f> <Right> 
-imap <C-b> <Left> 
-imap <M-f> <S-Right> 
-imap <M-b> <S-Left> 
-imap <M-n> <Down> 
+imap <C-e> <END>
+imap <C-a> <HOME>
+imap <C-f> <Right>
+imap <C-b> <Left>
+imap <M-f> <S-Right>
+imap <M-b> <S-Left>
+imap <M-n> <Down>
 imap <M-p> <Up>
 
 "自动补全
@@ -167,9 +167,9 @@ set laststatus=1
 
 "project 插件相关配置
 "隐藏目录树
-map <c-p> <C-W>l<C-W>\| 
+map <c-p> <C-W>l<C-W>\|
 
-"Code coloumn length Prompt 
+"Code coloumn length Prompt
 "set colorcolumn=81
 set cc=80
 "code length prompt colors
@@ -187,7 +187,7 @@ highlight CursorLine cterm=NONE ctermbg=blue ctermfg=white
 set foldenable
 set foldmethod=indent
 
-set background=dark "背景使用黑色 
+set background=dark "背景使用黑色
 
 " 编码
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
@@ -219,29 +219,29 @@ nnoremap <leader>3 :set filetype=javascript<CR>
 nnoremap <leader>4 :set filetype=xhtml<CR>
 
 
-"新建.c,.h,.sh,.java文件，自动插入文件头 
+"新建.c,.h,.sh,.java文件，自动插入文件头
 autocmd BufNewFile *.c,*.cpp,*.sh,*.php exec ":call SetDiffTitle()"
 
-"定义函数SetTitle，自动插入文件头 
+"定义函数SetTitle，自动插入文件头
 function! SetDiffTitle()
-    if &filetype == 'sh' 
-        call setline(1,"\#!/bin/bash") 
-        call append(line("."), "\###############################################################") 
-        call append(line(".")+1, "\# FileName: ".expand("%")) 
-        call append(line(".")+2, "\# Author: Chao Hong <teddy.hongchao@gmail.com>") 
-        call append(line(".")+3, "\# Program: ") 
+    if &filetype == 'sh'
+        call setline(1,"\#!/bin/bash")
+        call append(line("."), "\###############################################################")
+        call append(line(".")+1, "\# FileName: ".expand("%"))
+        call append(line(".")+2, "\# Author: Chao Hong <teddy.hongchao@gmail.com>")
+        call append(line(".")+3, "\# Program: ")
         call append(line(".")+4, "\# History:".strftime("%c"))
         call append(line(".")+5,"\###############################################################")
-        call append(line(".")+6,"") 
+        call append(line(".")+6,"")
     endif
 
     if &filetype == 'php'
-        call setline(1, "<?php") 
+        call setline(1, "<?php")
         call append(line("."), "\/**********************************************************")
         call append(line(".")+1, "\* File Name: ".expand("%"))
-        call append(line(".")+2, "\* Author: Chao Hong <teddy.hongchao@gmail.com>") 
-        call append(line(".")+3, "\* Program: ") 
-        call append(line(".")+4, "\* History: ".strftime("%c")) 
+        call append(line(".")+2, "\* Author: Chao Hong <teddy.hongchao@gmail.com>")
+        call append(line(".")+3, "\* Program: ")
+        call append(line(".")+4, "\* History: ".strftime("%c"))
         call append(line(".")+5, "\**********************************************************/")
         call append(line(".")+6, "")
     endif
@@ -271,20 +271,20 @@ endfunction
 "选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
 
-"为方便复制，用<F4>开启/关闭行号显示:  
+"为方便复制，用<F4>开启/关闭行号显示:
 nnoremap <F4> :set nonumber!<CR>:set foldcolumn=0<CR>
 
-"比较文件  
-nnoremap <C-F2> :vert diffsplit 
+"比较文件
+nnoremap <C-F2> :vert diffsplit
 
-"新建标签  
-map <M-F2> :tabnew<CR>  
+"新建标签
+map <M-F2> :tabnew<CR>
 
-"列出当前目录文件  
-map <F3> :tabnew .<CR>  
+"列出当前目录文件
+map <F3> :tabnew .<CR>
 
-"打开树状文件目录  
-map <C-F3> \be  
+"打开树状文件目录
+map <C-F3> \be
 
 " F5按文件类型编译运行
 map <F5> :call CompileRun()<CR>
@@ -304,8 +304,8 @@ func! CompileRun()
     elseif &filetype == 'php'
         exec "php %<"
         exec "! ./%<"
-    elseif &filetype == 'java' 
-        exec "!javac %" 
+    elseif &filetype == 'java'
+        exec "!javac %"
         exec "!java%<"
     elseif &filetype == 'sh'
         :!./%
@@ -332,14 +332,14 @@ set autowrite
 "quickfix模式
 autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 
-"代码补全 
+"代码补全
 set completeopt=preview,longest,menu
 
-"共享剪贴板  
-set clipboard+=unnamed 
+"共享剪贴板
+set clipboard+=unnamed
 
-"粘贴时保持格式  
-set paste 
+"粘贴时保持格式
+set paste
 
 "make 运行
 :set makeprg=g++\ -Wall\ \ %
@@ -361,7 +361,7 @@ set guioptions-=T
 
 "设置在状态行显示
 set foldcolumn=0
-set foldlevel=1 
+set foldlevel=1
 
 
 "语法高亮 Mac语法syntax on，Linux语法set syntax ＝ on
@@ -468,7 +468,7 @@ set scrolloff=15
 " Function F1~F11
 "--------------------------------------------------------------------
 
-"去空行  
+"去空行
 nnoremap <F2> :NERDTreeToggle<CR>
 
 function! RemoveEndSpaces()
@@ -492,9 +492,9 @@ function! ClosePair(char)
     endif
 endfunction
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " CTags Settings
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 
 "按照名称排序
 let Tlist_Sort_Type = "name"
@@ -514,7 +514,7 @@ let Tlist_File_Fold_Auto_Close = 0
 "不要显示折叠树
 let Tlist_Enable_Fold_Column = 0
 
-autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
+autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags
 
 autocmd FileType php set tags+=/home/teddy/git/oms/project/tagSrc
 autocmd FileType php set tags+=/home/teddy/git/oms/project/tagVendor
@@ -522,33 +522,33 @@ autocmd FileType php set tags+=/home/teddy/git/oms/project/tagVendor
 "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Show_One_File=1
 
-"设置tags  
-set tags=tags  
-set autochdir 
+"设置tags
+set tags=tags
+set autochdir
 
 " set tags+=/home/teddy/git/oms/project/tags
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " Taglist Settings
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 
-"默认打开Taglist 
-let Tlist_Auto_Open=1 
+"默认打开Taglist
+let Tlist_Auto_Open=1
 
 "Tag list (ctags)
-let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Show_One_File=1 
+let Tlist_Show_One_File=1
 
 "设置taglist宽度
 let Tlist_WinWidth=30
 
 "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Exit_OnlyWindow = 1 
+let Tlist_Exit_OnlyWindow = 1
 
 "在右侧窗口中显示taglist窗口
-let Tlist_Use_Right_Window = 1 
+let Tlist_Use_Right_Window = 1
 
 "minibufexpl插件的一般设置
 let g:miniBufExplMapWindowNavVim = 1
@@ -557,9 +557,9 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " YouCompleteMe Settings
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 
 " 补全功能在注释中同样有效
 let g:ycm_complete_in_comments=1
@@ -570,7 +570,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " 引入 C++ 标准库tags，这个没有也没关系，只要.ycm_extra_conf.py文件中指定了正确的标准库路径
 set tags+=/data/misc/software/misc./vim/stdcpp.tags
 
-let g:ycm_server_python_interpreter='/usr/bin/python2'
+let g:ycm_server_python_interpreter='/usr/local/bin/python3'
 " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
 inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表
@@ -579,7 +579,7 @@ set completeopt-=preview
 let g:ycm_min_num_of_chars_for_completion=2
 " 禁止缓存匹配项，每次都重新生成匹配项
 let g:ycm_cache_omnifunc=0
-" 语法关键字补全           
+" 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 " 修改对C函数的补全快捷键，默认是CTRL + space，修改为ALT + ;
 let g:ycm_key_invoke_completion = '<M-;>'
@@ -587,9 +587,9 @@ let g:ycm_key_invoke_completion = '<M-;>'
 nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
 
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " php-cs-fixer
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 
 " If php-cs-fixer is in $PATH, you don't need to define line below
 " define the path to the php-cs-fixer.phar
@@ -604,9 +604,9 @@ let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by defaul
 let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
 let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
 
-"--------------------------------------------------------------------- 
-" Autoreload vimrc
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
+" nerdcommenter
+"---------------------------------------------------------------------
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -618,7 +618,7 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 
 " Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
+let g:NERDAltDelims_php = 1
 
 " Add your own custom formats or override the defaults
 let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
@@ -629,16 +629,16 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " PDV
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <C-o> :call pdv#DocumentWithSnip()<CR>
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " UltiSnips
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -647,9 +647,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 " Auto reload vimrc
-"--------------------------------------------------------------------- 
+"---------------------------------------------------------------------
 
 "vimrc文件修改之后自动加载windows/linux
 autocmd! bufwritepost _vimrc source %

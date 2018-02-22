@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/teddy/.oh-my-zsh
+  export ZSH=/Users/hongchao/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -58,7 +58,6 @@ plugins=(git symfony2 sudo colored-man)
 PROMPT='[%F{green}%n@%m:%~%f]>'
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"  
-# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.linuxbrew/bin"  
 # export LD\_LIBRARY\_PATH="$HOME/.linuxbrew/lib:$LD\_LIBRARY\_PATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # personal export
 #--------------------------------------------------------------------
 
-export OMS=/home/$USER/git/oms
+export GHUB=/Users/$USER/code/github
 export IMG_DIR=/Data/webapps/img
 export DEPLOY=/home/dev/svn/deploy/trunk/dev
 
@@ -161,7 +160,7 @@ alias mysqlOnline='mycli -hdb.oms.uco.com -uhongchao '
 alias fsql='cd /home/teddy/git/oms; php app/console doctrine:schema:update --force --dump-sql; cd -'
 alias tt='cd /home/teddy/git/oms; /home/teddy/git/oms/vendor/phpunit/phpunit/phpunit -c app --stop-on-error'
 
-alias php='php7.1'
+alias php='php'
 
 
 #--------------------------------------------------------------------
