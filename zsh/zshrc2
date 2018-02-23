@@ -82,9 +82,9 @@ source $ZSH/oh-my-zsh.sh
 # personal export
 #--------------------------------------------------------------------
 
-export GHUB=/Users/$USER/code/github
+export GHUB=/$HOME/code/github
 export IMG_DIR=/Data/webapps/img
-export DEPLOY=/home/dev/svn/deploy/trunk/dev
+export DEPLOY=/$HOME/git/deploy/trunk/dev
 
 # history lines and time
 export HISTTIMEFORMAT='%F %T '
@@ -122,8 +122,8 @@ alias -s c=vim
 #--------------------------------------------------------------------
 
 #vim
-alias vimrc="vim ~/.vimrc"
-alias vimbundle="vim ~/.vim/.vimrc.bundles"
+alias vimrc="vim $HOME/.vimrc"
+alias vimbundle="vim $HOME/.vim/.vimrc.bundles"
 
 #zsh
 alias zshrc="vim ~/.zshrc"
@@ -162,6 +162,7 @@ alias tt='cd /home/teddy/git/oms; /home/teddy/git/oms/vendor/phpunit/phpunit/php
 
 alias php='php'
 
+alias al='ssh aliyun'
 
 #--------------------------------------------------------------------
 # fuck

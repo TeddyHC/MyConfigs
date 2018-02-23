@@ -1,8 +1,8 @@
 "vimrc.bundle
 "Author: Chao Hong <teddy.hongchao@gmail.com>
 
-" 在Github vim-scripts 用户下的repos,只需要写出repos名称
-" 在Github其他用户下的repos, 需要写出” 用户名/repos名”s
+" 在Github vim-scripts下的repos,只需要写出'repos名'
+" 在Github 其他用户下的repos, 需要写'用户名/repos名'
 " 不在Github上的插件，需要写出git全路径
 
 "--------------------------------------------------------------------
@@ -29,56 +29,75 @@ call vundle#begin()
 "--------------------------------------------------------------------
 Plugin 'gmarik/Vundle.vim'
 
+" 工程树状图
 Plugin 'scrooloose/nerdtree'
+" 快捷注释
 Plugin 'scrooloose/nerdcommenter'
+" 下部状态条
+Plugin 'majutsushi/tagbar'
+" 状态条改进
+" Plugin 'powerline/powerline'
 
+" 文件缓存和快速跳转
+Plugin 'jlanzarotta/bufexplorer'
+" 文件搜索跳转
+Plugin 'ctrlpvim/ctrlp.vim'
+" 方法查找跳转
+Plugin 'tacahiroy/ctrlp-funky'
+
+" 代码补全
 Plugin 'Valloric/YouCompleteMe'
+
+" 颜色主题
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
+" git支持
 Plugin 'tpope/vim-fugitive'
+" 标记符号替换
 Plugin 'tpope/vim-surround'
 
-Plugin 'jlanzarotta/bufexplorer'
+" html快速书写
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" 补全对应符号
 Plugin 'Raimondi/delimitMate'
+" 缩进补充线
 Plugin 'Yggdroot/indentLine'
-Plugin 'tomasr/molokai'
-Plugin 'rkulla/pydiction'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'majutsushi/tagbar'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'stephpy/vim-php-cs-fixer'
+
+" 一键代码格式化
 Plugin 'Chiel92/vim-autoformat'
+" php语法格式化
+Plugin 'stephpy/vim-php-cs-fixer'
+" js,css代码格式化
 Plugin 'maksimr/vim-jsbeautify'
 
-Plugin 'tobyS/vmustache'
-Plugin 'tobyS/pdv'
-
-Plugin 'Lokaltog/vim-powerline'
+" 语法检查
 Plugin 'vim-syntastic/syntastic'
 
+" php注释
+Plugin 'tobys/vmustache' "required plugin for PDV to work
+Plugin 'tobyS/pdv'
+
+" 光标快速定位
 Plugin 'easymotion/vim-easymotion'
 
+" 代码扩展
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
-Plugin 'danro/rename.vim'
-Plugin 'pbrisbin/vim-mkdir'
-
 " twig
-" Plugin 'nelsyeung/twig.vim'
-Plugin 'lumiliet/vim-twig'
+"Plugin 'lumiliet/vim-twig'
 
+" go语言支持
 Plugin 'fatih/vim-go'
 
 "--------------------------------------------------------------------
 " vim-scripts repos on github
 "--------------------------------------------------------------------
-Plugin 'L9'
 
 "--------------------------------------------------------------------
 " non github repos

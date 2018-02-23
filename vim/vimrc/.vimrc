@@ -492,6 +492,9 @@ function! ClosePair(char)
     endif
 endfunction
 
+" 当打开vim且没有文件时自动打开NERDTree
+autocmd vimenter * if !argc(  )   | NERDTree | endif
+
 "---------------------------------------------------------------------
 " CTags Settings
 "---------------------------------------------------------------------
@@ -648,9 +651,33 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 "---------------------------------------------------------------------
+" indentLine
+"---------------------------------------------------------------------
+" let g:indentLine_char = '|'
+" Vim
+let g:indentLine_color_term = 239
+
+" GVim
+" let g:indentLine_color_gui = '#A4E57E'
+
+" none X terminal
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
+
+" Background (Vim, GVim)
+" let g:indentLine_bgcolor_term = 202
+" let g:indentLine_bgcolor_gui = '#FF5F00'
+
+"---------------------------------------------------------------------
+" ctrlp-funky
+"---------------------------------------------------------------------
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+"---------------------------------------------------------------------
 " Auto reload vimrc
 "---------------------------------------------------------------------
-
 "vimrc文件修改之后自动加载windows/linux
 autocmd! bufwritepost _vimrc source %
 autocmd! bufwritepost .vimrc source %
