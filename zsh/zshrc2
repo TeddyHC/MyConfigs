@@ -82,7 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # personal export
 #--------------------------------------------------------------------
 
-export GHUB=/$HOME/code/github
+export HUB=/$HOME/code/github
+export LAB=/$HOME/code/gitlab
 export IMG_DIR=/Data/webapps/img
 export DEPLOY=/$HOME/git/deploy/trunk/dev
 
@@ -102,7 +103,7 @@ export HISTSIZE="10000"
 alias CD='cd'
 alias cD='cd'
 alias cls='clear'
-alias ll='ls -alh'
+alias ll='ls -alhG -A'
 alias vi='vim'
 alias tailf='tail -f'
 # alias grep='grep --color=auto --exclude-dir=\.svn --exclude-dir=\.git --exclude-dir=js --exclude-dir=ueditor --exclude-dir=css --exclude-dir=test --exclude-dir=Tests --exclude-dir=project --exclude-dir=cache --exclude-dir=logs --exclude-dir=web --exclude-dir=vendor -n'
@@ -147,7 +148,7 @@ alias errlog="tail --follow /tmp/log_* /tmp/allsqls.log /tmp/slowsqls.log /tmp/e
 alias rst='sudo service nginx restart; sudo service php7.1-fpm restart'
 
 #open project with vim
-alias vop='cd /home/teddy/git/oms; vim -c "NERDTree"'
+alias vc='cd /mfw_project/apps/sales_car; vim'
 
 #cleancache
 alias ccache='cd /home/teddy/git/oms; php7.1 app/console cache:clear --no-warmup --env dev; cd -'

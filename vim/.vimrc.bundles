@@ -34,9 +34,9 @@ Plugin 'scrooloose/nerdtree'
 " 快捷注释
 Plugin 'scrooloose/nerdcommenter'
 " 下部状态条
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 " 状态条改进
-" Plugin 'powerline/powerline'
+Plugin 'powerline/powerline'
 
 " 文件缓存和快速跳转
 Plugin 'jlanzarotta/bufexplorer'
@@ -74,12 +74,14 @@ Plugin 'stephpy/vim-php-cs-fixer'
 " js,css代码格式化
 Plugin 'maksimr/vim-jsbeautify'
 
-" 语法检查
-Plugin 'vim-syntastic/syntastic'
-
 " php注释
 Plugin 'tobys/vmustache' "required plugin for PDV to work
 Plugin 'tobyS/pdv'
+
+" 语法检查(两者有冲突)
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
+
 
 " 光标快速定位
 Plugin 'easymotion/vim-easymotion'
