@@ -423,8 +423,8 @@ set cmdheight=1
 "保存全局变量
 set viminfo+=!
 
-"带有如下符号的单词不要被换行分割
-set iskeyword+=_,$,@,%,#,-
+" 把哪些符号认为是同一个单词
+set iskeyword+=_,$,@,%,#
 
 "字符间插入的像素行数目
 set linespace=0

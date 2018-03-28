@@ -139,6 +139,8 @@ alias pfix='php-cs-fixer fix'
 alias pcs='/home/teddy/git/PHP_CodeSniffer/bin/phpcs'
 alias pcbf='/home/teddy/git/PHP_CodeSniffer/bin/phpcbf'
 
+alias ag='ag --php'
+
 #--------------------------------------------------------------------
 # work aliases
 #--------------------------------------------------------------------

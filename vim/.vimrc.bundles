@@ -94,6 +94,8 @@ Plugin 'garbas/vim-snipmate'
 " twig
 "Plugin 'lumiliet/vim-twig'
 
+Plugin 'mileszs/ack.vim'
+
 " go语言支持
 Plugin 'fatih/vim-go'
 
