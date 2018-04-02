@@ -52,8 +52,11 @@ inoremap jj <ESC>
 "把所有的数字都当成十进制，防止八进制和16进制干扰
 set nrformats=
 
-"自动缩进
-set ai
+" 自动缩进
+" set cindent
+" set autoindent
+set smartindent
+" set ai
 
 " 如果该 Vim 支持鼠标，则启用鼠标支持
 " if has('mouse')
@@ -372,11 +375,6 @@ set noeb
 
 "在处理未保存或只读文件的时候，弹出确认
 set confirm
-
-"为程序提供自动缩进
-set autoindent
-set smartindent
-set cindent
 
 "Tab键的宽度，统一缩进为4，用空格代替制表符
 set tabstop=4
