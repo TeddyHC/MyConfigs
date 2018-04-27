@@ -43,8 +43,15 @@ set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\
 " 启动的时候不显示那个援助乌干达儿童
 set shortmess=at
 
-"style
-colorscheme molokai
+" style
+" 背景使用黑色
+set background=dark
+" colorscheme molokai
+" colorscheme solarized
+colorscheme onedark
+
+let g:lightline = {'colorscheme': 'onedark'}
+let g:airline_theme='onedark'
 
 " 用jj代替ESC
 inoremap jj <ESC>
@@ -190,7 +197,6 @@ highlight CursorLine cterm=NONE ctermbg=blue ctermfg=white
 set foldenable
 set foldmethod=indent
 
-set background=dark "背景使用黑色
 
 " 编码
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936

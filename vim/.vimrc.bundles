@@ -31,6 +31,9 @@ Plugin 'gmarik/Vundle.vim'
 
 " 工程树状图
 Plugin 'scrooloose/nerdtree'
+" 文件类型图标
+Plugin 'ryanoasis/vim-devicons'
+
 " 快捷注释
 Plugin 'scrooloose/nerdcommenter'
 " 状态条改进
@@ -47,13 +50,14 @@ Plugin 'tacahiroy/ctrlp-funky'
 
 " 代码补全
 Plugin 'Valloric/YouCompleteMe'
-
 " 括号闭合
 Plugin 'jiangmiao/auto-pairs'
 
 " 颜色主题
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'joshdick/onedark.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -62,6 +66,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-fugitive'
 " 标记符号替换
 Plugin 'tpope/vim-surround'
+" 条件完结语句
+Plugin 'tpope/vim-endwise'
 
 " html快速书写
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -76,6 +82,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'stephpy/vim-php-cs-fixer'
 " js,css代码格式化
 Plugin 'maksimr/vim-jsbeautify'
+
 
 " php注释
 Plugin 'tobys/vmustache' "required plugin for PDV to work
@@ -98,6 +105,7 @@ Plugin 'garbas/vim-snipmate'
 "Plugin 'lumiliet/vim-twig'
 
 Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-pathogen'
 
 " go语言支持
 Plugin 'fatih/vim-go'
