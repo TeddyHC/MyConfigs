@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 
 export HUB=/$HOME/code/github
 export LAB=/$HOME/code/gitlab
+export WD=/$HOME/code/gitlab/WebDev
 export IMG_DIR=/Data/webapps/img
 export DEPLOY=/$HOME/git/deploy/trunk/dev
 
@@ -139,7 +140,7 @@ alias pfix='php-cs-fixer fix'
 alias pcs='/home/teddy/git/PHP_CodeSniffer/bin/phpcs'
 alias pcbf='/home/teddy/git/PHP_CodeSniffer/bin/phpcbf'
 
-alias ag='ag --php'
+# alias ag='ag --php'
 
 #--------------------------------------------------------------------
 # work aliases
@@ -150,7 +151,7 @@ alias errlog="tail --follow /tmp/log_* /tmp/allsqls.log /tmp/slowsqls.log /tmp/e
 alias rst='sudo service nginx restart; sudo service php7.1-fpm restart'
 
 #open project with vim
-alias vc='cd /mfw_project/apps/sales_car; vim'
+alias vc='cd /Users/hongchao/code/gitlab/WebDev/sales-car; vim'
 
 #cleancache
 alias ccache='cd /home/teddy/git/oms; php7.1 app/console cache:clear --no-warmup --env dev; cd -'

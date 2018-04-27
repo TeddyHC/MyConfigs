@@ -1,5 +1,5 @@
-"vimrc
-"Author: Chao Hong <teddy.hongchao@gmail.com>
+" vimrc
+" Author: Chao Hong <teddy.hongchao@gmail.com>
 
 "--------------------------------------------------------------------
 " Vundle and Plug-in
@@ -28,7 +28,7 @@ endif
 " 持久撤销文件存放目录
 " exec 'set undodir='.fnameescape(g:vimrc_home.'/.vim_undo/')
 
-"字体
+" 字体
 if (has("gui_running"))
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
 endif
@@ -515,8 +515,6 @@ let Tlist_File_Fold_Auto_Close = 0
 "不要显示折叠树
 let Tlist_Enable_Fold_Column = 0
 
-autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags
-
 autocmd FileType php set tags+=/home/teddy/git/oms/project/tagSrc
 autocmd FileType php set tags+=/home/teddy/git/oms/project/tagVendor
 
@@ -571,7 +569,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " 引入 C++ 标准库tags，这个没有也没关系，只要.ycm_extra_conf.py文件中指定了正确的标准库路径
 set tags+=/data/misc/software/misc./vim/stdcpp.tags
 
-let g:ycm_server_python_interpreter='/usr/local/bin/python3'
+let g:ycm_server_python_interpreter='/usr/local/bin/python2'
 " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
 inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表

@@ -33,10 +33,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 " 快捷注释
 Plugin 'scrooloose/nerdcommenter'
-" 下部状态条
-" Plugin 'majutsushi/tagbar'
 " 状态条改进
-Plugin 'powerline/powerline'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'powerline/powerline'
+Plugin 'vim-airline/vim-airline'
 
 " 文件缓存和快速跳转
 Plugin 'jlanzarotta/bufexplorer'
@@ -47,6 +47,9 @@ Plugin 'tacahiroy/ctrlp-funky'
 
 " 代码补全
 Plugin 'Valloric/YouCompleteMe'
+
+" 括号闭合
+Plugin 'jiangmiao/auto-pairs'
 
 " 颜色主题
 Plugin 'tomasr/molokai'
@@ -98,6 +101,9 @@ Plugin 'mileszs/ack.vim'
 
 " go语言支持
 Plugin 'fatih/vim-go'
+
+" sftp
+Plugin 'eshion/vim-sync'
 
 "--------------------------------------------------------------------
 " vim-scripts repos on github
