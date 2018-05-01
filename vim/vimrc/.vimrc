@@ -46,9 +46,9 @@ set shortmess=at
 " style
 " 背景使用黑色
 set background=dark
-" colorscheme molokai
+colorscheme molokai
 " colorscheme solarized
-colorscheme onedark
+" colorscheme onedark
 
 let g:lightline = {'colorscheme': 'onedark'}
 let g:airline_theme='onedark'
