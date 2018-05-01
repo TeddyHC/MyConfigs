@@ -54,10 +54,11 @@ plugins=(git symfony2 sudo colored-man)
 
 # User configuration
 
-#当前目录
-PROMPT='[%F{green}%n@%m:%~%f]>'
+# 当前目录
+# PROMPT='[%F{green}%n@%m:%~%f]>'
+PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}->'
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"  
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$USER/.composer/vendor/bin"
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.linuxbrew/bin"  
 # export LD\_LIBRARY\_PATH="$HOME/.linuxbrew/lib:$LD\_LIBRARY\_PATH"
 
