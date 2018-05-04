@@ -1,24 +1,24 @@
 # Default user(teddy.hongchao@gmail.com)
-Host github.com
+Host github
 HostName github.com
 User git
 IdentityFile ~/.ssh/id_rsa
 
-# UCO Git user (hongchao@uco.com)
-Host git_uco
-HostName git.uco.com
+# user hongchao(hongchao@mafengwo.com)
+Host gitlab_mfw
+HostName ssh.gitlab.mfwdev.com
 User git
-Port 51022
+Port 333
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/uco_rsa
+IdentityFile ~/.ssh/mfw_rsa
 
-# Work dev(hongchao@uco.com)
+# Work dev(hongchao@mafengwo.com)
 Host uco_dev
-HostName 10.88.43.238
+HostName 10.88.42.152
 User teddy
 Port 22
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/mfw_rsa
 
 #Bitbucket(teddy.hongchao@gmail.com)
 Host bitbucket
@@ -28,11 +28,34 @@ Port 22
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/id_rsa
 
-#Gitlab(teddy.hongchao@gmail.com)
-Host gitlab
-HostName gitlab.com
-User git
+#123.57.60.160(teddy.hongchao@gmail.com)
+Host aliyun
+HostName 106.14.132.13
+User teddy
 Port 22
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/id_rsa
 
+#172.18.8.41(hongchao@mafengwo.com)
+Host mfw_code
+HostName 172.18.8.41
+User hongchao
+Port 333
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/mfw_rsa
+
+#172.18.8.43(hongchao@mafengwo.com)
+Host mfw_docker
+HostName 172.18.8.43
+User hongchao
+Port 333
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/mfw_rsa
+
+#172.18.8.44(hongchao@mafengwo.com)
+Host mfw_docker_dev
+HostName 172.18.8.44
+User hongchao
+Port 333
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/mfw_rsa
