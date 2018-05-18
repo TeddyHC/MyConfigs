@@ -83,6 +83,7 @@ Plugin 'stephpy/vim-php-cs-fixer'
 " js,css代码格式化
 Plugin 'maksimr/vim-jsbeautify'
 
+Plugin 'lvht/phpcd.vim'
 
 " php注释
 Plugin 'tobys/vmustache' "required plugin for PDV to work

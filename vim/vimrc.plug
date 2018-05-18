@@ -1,0 +1,101 @@
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+
+Plug 'gmarik/Vundle.vim'
+
+" 工程树状图
+Plug 'scrooloose/nerdtree'
+" 文件类型图标
+Plug 'ryanoasis/vim-devicons'
+
+" 快捷注释
+Plug 'scrooloose/nerdcommenter'
+" 状态条改进
+" Plug 'majutsushi/tagbar'
+" Plug 'powerline/powerline'
+Plug 'vim-airline/vim-airline'
+
+" 文件缓存和快速跳转
+Plug 'jlanzarotta/bufexplorer'
+" 文件搜索跳转
+Plug 'ctrlpvim/ctrlp.vim'
+" 方法查找跳转
+Plug 'tacahiroy/ctrlp-funky'
+
+" 代码补全
+Plug 'Valloric/YouCompleteMe'
+" 括号闭合
+Plug 'jiangmiao/auto-pairs'
+
+" 颜色主题
+Plug 'tomasr/molokai'
+Plug 'flazz/vim-colorschemes'
+Plug 'joshdick/onedark.vim'
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" git支持
+Plug 'tpope/vim-fugitive'
+" 标记符号替换
+Plug 'tpope/vim-surround'
+" 条件完结语句
+Plug 'tpope/vim-endwise'
+
+" html快速书写
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+" 补全对应符号
+Plug 'Raimondi/delimitMate'
+" 缩进补充线
+Plug 'Yggdroot/indentLine'
+
+" 一键代码格式化
+Plug 'Chiel92/vim-autoformat'
+" php语法格式化
+Plug 'stephpy/vim-php-cs-fixer'
+" js,css代码格式化
+Plug 'maksimr/vim-jsbeautify'
+
+" php注释
+Plug 'tobys/vmustache' "required plugin for PDV to work
+Plug 'tobyS/pdv'
+
+" 语法检查(两者有冲突)
+" Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
+
+Plug 'junegunn/fzf'
+
+Plug 'terryma/vim-multiple-cursors'
+Plug 'michaeljsmith/vim-indent-object'
+
+" 光标快速定位
+Plug 'easymotion/vim-easymotion'
+
+" 代码扩展
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+" twig
+"Plug 'lumiliet/vim-twig'
+
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-pathogen'
+
+" go语言支持
+Plug 'fatih/vim-go'
+
+" sftp
+Plug 'eshion/vim-sync'
+
+
+"--------------------------------------------------------------------
+" non github repos
+"--------------------------------------------------------------------
+
+
+call plug#end()

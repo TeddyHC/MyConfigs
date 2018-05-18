@@ -85,7 +85,6 @@ source $ZSH/oh-my-zsh.sh
 export HUB=/$HOME/code/github
 export LAB=/$HOME/code/gitlab
 export WD=/$HOME/code/gitlab/WebDev
-export IMG_DIR=/Data/webapps/img
 export DEPLOY=/$HOME/git/deploy/trunk/dev
 
 # history lines and time
@@ -115,7 +114,6 @@ alias tailf='tail -f'
 # open file aliases
 #--------------------------------------------------------------------
 
-alias -s php=vim
 # alias -s py=vim
 alias -s c=vim
 
@@ -135,10 +133,14 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 #hosts
 alias hosts='sudo vim /etc/hosts'
 
-#php format
+#--------------------------------------------------------------------
+# php
+#--------------------------------------------------------------------
+alias -s php=vim
+
 alias pfix='php-cs-fixer fix'
-alias pcs='/home/teddy/git/PHP_CodeSniffer/bin/phpcs'
-alias pcbf='/home/teddy/git/PHP_CodeSniffer/bin/phpcbf'
+alias pcs='$HOME/code/github/PHP_CodeSniffer/bin/phpcs'
+alias pcbf='$HOME/code/github/PHP_CodeSniffer/bin/phpcbf'
 
 # alias ag='ag --php'
 
@@ -146,7 +148,7 @@ alias pcbf='/home/teddy/git/PHP_CodeSniffer/bin/phpcbf'
 # work aliases
 #--------------------------------------------------------------------
 
-alias errlog="tail --follow /tmp/log_* /tmp/allsqls.log /tmp/slowsqls.log /tmp/exception_* /var/log/nginx/error.log /var/log/php7.1-fpm.log"
+alias errlog="tail -f /tmp/log_* /tmp/allsqls.log /tmp/slowsqls.log /tmp/exception_* /var/log/nginx/error.log /var/log/php7.1-fpm.log"
 
 alias rst='sudo service nginx restart; sudo service php7.1-fpm restart'
 
@@ -156,6 +158,8 @@ alias vc='cd /Users/hongchao/code/gitlab/WebDev/sales-car; vim'
 #cleancache
 alias ccache='cd /home/teddy/git/oms; php7.1 app/console cache:clear --no-warmup --env dev; cd -'
 alias cjs='cd /home/teddy/git/oms; php app/console assets:install web --env dev && php app/console assetic:dump --env dev; cd -'
+
+alias update='php /Users/hongchao/code/github/gitlab_project/bin/init.php'
 
 #mysql
 alias mysql1='mycli -h127.0.0.1 -uroot'

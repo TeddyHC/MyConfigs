@@ -4,8 +4,12 @@
 "--------------------------------------------------------------------
 " Vundle and Plug-in
 "--------------------------------------------------------------------
-if filereadable(expand("~/.vim/.vimrc.bundles"))
-    source ~/.vim/.vimrc.bundles
+" if filereadable(expand("~/.vim/.vimrc.bundles"))
+    " source ~/.vim/.vimrc.bundles
+" endif
+
+if filereadable(expand("~/.vim/.vimrc.plug"))
+    source ~/.vim/.vimrc.plug
 endif
 
 " Brief help
@@ -681,6 +685,21 @@ let g:indentLine_color_dark = 1 " (default: 2)
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+"---------------------------------------------------------------------
+" multiple-cursors
+"---------------------------------------------------------------------
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 "---------------------------------------------------------------------
 " Auto reload vimrc
