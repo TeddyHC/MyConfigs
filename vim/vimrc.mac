@@ -12,15 +12,6 @@ if filereadable(expand("~/.vim/.vimrc.plug"))
     source ~/.vim/.vimrc.plug
 endif
 
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just:PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 "--------------------------------------------------------------------
 " Base settings
 "--------------------------------------------------------------------
@@ -46,6 +37,9 @@ set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\
 
 " 启动的时候不显示那个援助乌干达儿童
 set shortmess=at
+
+"语法高亮 Mac语法syntax on，Linux语法set syntax ＝ on
+syntax on
 
 " style
 " 背景使用黑色
@@ -201,7 +195,6 @@ highlight CursorLine cterm=NONE ctermbg=blue ctermfg=white
 set foldenable
 set foldmethod=indent
 
-
 " 编码
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
@@ -230,7 +223,6 @@ nnoremap <leader>1 :set filetype=php<CR>
 nnoremap <leader>2 :set filetype=css<CR>
 nnoremap <leader>3 :set filetype=javascript<CR>
 nnoremap <leader>4 :set filetype=xhtml<CR>
-
 
 "新建.c,.h,.sh,.java文件，自动插入文件头
 autocmd BufNewFile *.c,*.cpp,*.sh,*.php exec ":call SetDiffTitle()"
@@ -284,8 +276,9 @@ endfunction
 "选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
 
-"为方便复制，用<F4>开启/关闭行号显示:
-nnoremap <F4> :set nonumber!<CR>:set foldcolumn=0<CR>
+"--------------------------------------------------------------------
+" Fx Functions
+"--------------------------------------------------------------------
 
 "比较文件
 nnoremap <C-F2> :vert diffsplit
@@ -298,6 +291,9 @@ map <F3> :tabnew .<CR>
 
 "打开树状文件目录
 map <C-F3> \be
+
+"为方便复制，用<F4>开启/关闭行号显示:
+nnoremap <F4> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 " F5按文件类型编译运行
 map <F5> :call CompileRun()<CR>
@@ -375,10 +371,6 @@ set guioptions-=T
 "设置在状态行显示
 set foldcolumn=0
 set foldlevel=1
-
-
-"语法高亮 Mac语法syntax on，Linux语法set syntax ＝ on
-syntax on
 
 "去掉输入错误的提示声音
 set noeb
