@@ -171,6 +171,7 @@ alias tt='cd /home/teddy/git/oms; /home/teddy/git/oms/vendor/phpunit/phpunit/php
 alias php='php'
 
 alias al='ssh aliyun'
+alias tc='ssh tencentCloud'
 
 #--------------------------------------------------------------------
 # fuck

@@ -1,0 +1,34 @@
+[core]
+	excludesfile = /Users/hongchao/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[color]
+	ui = auto
+[credential]
+	helper = store
+[commit]
+	template = /Users/Hongchao/.stCommitMsg
+[alias]
+    co = checkout
+    cm = commit -am
+    st = status
+    b = branch
+    cp = cherry-pick
+    
+[user]
+	name = hongchao
+	email = teddy.hongchao@gmail.com

@@ -38,9 +38,6 @@ set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\
 " 启动的时候不显示那个援助乌干达儿童
 set shortmess=at
 
-"语法高亮 Mac语法syntax on，Linux语法set syntax ＝ on
-syntax on
-
 " style
 " 背景使用黑色
 set background=dark
@@ -160,9 +157,9 @@ nnoremap <Leader>p :cp<cr>
 "set font
 set guifont=Courier_New:h10:cANSI
 
-"用浅色高亮当前行,离开时消失
-autocmd InsertEnter * se cul
-autocmd InsertLeave * se nocul
+" 用浅色高亮当前行,离开时消失
+" autocmd InsertEnter * se cul
+" autocmd InsertLeave * se nocul
 
 "输入的命令完整的显示出来，看的清楚些
 set showcmd
@@ -177,11 +174,16 @@ set laststatus=1
 "隐藏目录树
 map <c-p> <C-W>l<C-W>\|
 
+" 语法高亮 
+" Mac语法syntax on，Linux语法set syntax ＝ on
+syntax on
+
 "Code coloumn length Prompt
 "set colorcolumn=81
 set cc=80
 "code length prompt colors
-highlight CursorLine cterm=NONE ctermbg=blue ctermfg=white
+" highlight CursorLine cterm=NONE ctermbg=blue ctermfg=white
+highlight CursorLine cterm=NONE ctermbg=black
 
 "有6种方式来折叠代码:
 "1. manual //手工定义折叠
@@ -194,6 +196,7 @@ highlight CursorLine cterm=NONE ctermbg=blue ctermfg=white
 "Allow the folding
 set foldenable
 set foldmethod=indent
+
 
 " 编码
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
@@ -692,6 +695,7 @@ let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
 
 "---------------------------------------------------------------------
 " Auto reload vimrc

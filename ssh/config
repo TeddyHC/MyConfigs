@@ -12,15 +12,15 @@ Port 333
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/mfw_rsa
 
-# Work dev(hongchao@mafengwo.com)
-Host uco_dev
-HostName 10.88.42.152
+# tencentCloud(teddy.hongchao@gmail.com)
+Host tencentCloud
+HostName 140.143.33.202
 User teddy
 Port 22
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
+IdentityFile ~/.ssh/id_rsa
 
-#Bitbucket(teddy.hongchao@gmail.com)
+# Bitbucket(teddy.hongchao@gmail.com)
 Host bitbucket
 HostName bitbucket.org
 User git
@@ -46,7 +46,7 @@ IdentityFile ~/.ssh/mfw_rsa
 
 #172.18.8.43(hongchao@mafengwo.com)
 Host mfw_docker
-HostName 172.18.8.43
+HostName 172.18.8.36
 User hongchao
 Port 333
 PubkeyAuthentication yes
