@@ -10,7 +10,7 @@ HostName ssh.gitlab.mfwdev.com
 User git
 Port 333
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
+IdentityFile ~/.ssh/id_rsa
 
 # tencentCloud(teddy.hongchao@gmail.com)
 Host tencentCloud
