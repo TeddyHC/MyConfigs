@@ -19,6 +19,7 @@
 ### 开发
 - iTerm2
 - phpStorm
+- Navicat
 
 ### 娱乐
 - steam

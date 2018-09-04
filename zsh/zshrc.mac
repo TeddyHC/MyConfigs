@@ -57,7 +57,7 @@ plugins=(git symfony2 sudo colored-man)
 #当前目录
 PROMPT='[%F{green}%n@%m:%~%f]>'
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"  
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Applications/Julia-1.0.app/Contents/Resources/julia/bin/"  
 # export LD\_LIBRARY\_PATH="$HOME/.linuxbrew/lib:$LD\_LIBRARY\_PATH"
 
 source $ZSH/oh-my-zsh.sh
