@@ -24,6 +24,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " 方法查找跳转
 Plug 'tacahiroy/ctrlp-funky'
 
+" 关键词检索
+Plug 'mhinz/vim-grepper'
+
 " 代码补全
 Plug 'Valloric/YouCompleteMe'
 " 括号闭合
@@ -79,6 +82,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
+
+" 参数折叠
+Plug 'FooSoft/vim-argwrap'
 
 " twig
 "Plug 'lumiliet/vim-twig'

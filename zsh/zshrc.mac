@@ -57,13 +57,13 @@ plugins=(git symfony2 sudo colored-man)
 #当前目录
 PROMPT='[%F{green}%n@%m:%~%f]>'
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"  
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/hongchao/Library/Python/3.7/bin"
 # export LD\_LIBRARY\_PATH="$HOME/.linuxbrew/lib:$LD\_LIBRARY\_PATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -138,7 +138,7 @@ alias hosts='sudo vim /etc/hosts'
 #--------------------------------------------------------------------
 alias -s php=vim
 
-alias pfix='php-cs-fixer fix'
+alias pfix='php-cs-fixer fix --rules=@Symfony'
 alias pcs='$HOME/code/github/PHP_CodeSniffer/bin/phpcs'
 alias pcbf='$HOME/code/github/PHP_CodeSniffer/bin/phpcbf'
 
@@ -170,8 +170,8 @@ alias tt='cd /home/teddy/git/oms; /home/teddy/git/oms/vendor/phpunit/phpunit/php
 
 alias php='php'
 
-alias al='ssh aliyun'
 alias tc='ssh tencentCloud'
+
 
 #--------------------------------------------------------------------
 # fuck

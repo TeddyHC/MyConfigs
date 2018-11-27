@@ -48,6 +48,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " 方法查找跳转
 Plugin 'tacahiroy/ctrlp-funky'
 
+" 关键词检索
+Plugin 'mhinz/vim-grepper'
+
 " 代码补全
 Plugin 'Valloric/YouCompleteMe'
 " 括号闭合
@@ -104,6 +107,9 @@ Plugin 'garbas/vim-snipmate'
 
 " twig
 "Plugin 'lumiliet/vim-twig'
+
+" 参数折叠
+Plugin 'FooSoft/vim-argwrap'
 
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-pathogen'
