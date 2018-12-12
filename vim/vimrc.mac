@@ -58,7 +58,6 @@ set nrformats=
 " set cindent
 " set autoindent
 set smartindent
-" set ai
 
 " 如果该 Vim 支持鼠标，则启用鼠标支持
 " if has('mouse')
@@ -582,7 +581,7 @@ inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表
 set completeopt-=preview
 " 从第2个键入字符开始罗列匹配项
-let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_min_num_of_chars_for_completion=1
 " 禁止缓存匹配项，每次都重新生成匹配项
 let g:ycm_cache_omnifunc=0
 " 语法关键字补全

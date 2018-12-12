@@ -123,7 +123,7 @@ alias -s c=vim
 
 #vim
 alias vimrc="vim $HOME/.vimrc"
-alias vimbundle="vim $HOME/.vim/.vimrc.bundles"
+alias vimplug="vim $HOME/.vim/.vimrc.plug"
 
 #zsh
 alias zshrc="vim $HOME/.zshrc"
@@ -164,10 +164,7 @@ alias php='php'
 
 alias tc='ssh tencentCloud'
 
-<<<<<<< HEAD
-=======
 #open project with vim
->>>>>>> db3b6a4b09a045d83bd00510b0355a90fc7dd5ea
 
 #--------------------------------------------------------------------
 # fuck
