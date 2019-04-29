@@ -58,7 +58,6 @@ set nrformats=
 " set cindent
 " set autoindent
 set smartindent
-" set ai
 
 " 如果该 Vim 支持鼠标，则启用鼠标支持
 " if has('mouse')
@@ -390,11 +389,13 @@ set shiftwidth=4 softtabstop=4 expandtab
 "在行和段开始处使用制表符
 set smarttab
 
-"显示行号
+" 显示行号
 set number
+" 使用相对行号
+set relativenumber
 
-"历史记录数
-set history=200
+" 历史记录数
+set history=1000
 
 "不备份文件
 set nobackup
@@ -574,13 +575,13 @@ let g:ycm_collect_identifiers_from_tags_files=1
 " 引入 C++ 标准库tags，这个没有也没关系，只要.ycm_extra_conf.py文件中指定了正确的标准库路径
 set tags+=/data/misc/software/misc./vim/stdcpp.tags
 
-let g:ycm_server_python_interpreter='/usr/local/bin/python2'
+let g:ycm_server_python_interpreter='/usr/local/bin/python3'
 " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
 inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表
 set completeopt-=preview
 " 从第2个键入字符开始罗列匹配项
-let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_min_num_of_chars_for_completion=1
 " 禁止缓存匹配项，每次都重新生成匹配项
 let g:ycm_cache_omnifunc=0
 " 语法关键字补全

@@ -4,14 +4,6 @@ HostName github.com
 User git
 IdentityFile ~/.ssh/id_rsa
 
-# user hongchao(hongchao@mafengwo.com)
-Host gitlab_mfw
-HostName ssh.gitlab.mfwdev.com
-User git
-Port 333
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
-
 # tencentCloud(teddy.hongchao@gmail.com)
 Host tencentCloud
 HostName 140.143.33.202
@@ -28,15 +20,6 @@ Port 22
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/id_rsa
 
-#123.57.60.160(teddy.hongchao@gmail.com)
-Host aliyun
-HostName 106.14.132.13
-User teddy
-Port 22
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/id_rsa
-
-#172.18.8.41(hongchao@mafengwo.com)
 Host mfw_code
 HostName 172.18.8.41
 User hongchao
@@ -44,18 +27,11 @@ Port 333
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/mfw_rsa
 
-#172.18.8.43(hongchao@mafengwo.com)
+#ssh.console.ab(hongchao@mafengwo.com)
 Host mfw_docker
-HostName 172.18.8.36
+HostName ssh.console.ab
 User hongchao
 Port 333
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
+IdentityFile ~/.ssh/id_rsa
 
-#172.18.8.44(hongchao@mafengwo.com)
-Host mfw_docker_dev
-HostName 172.18.8.44
-User hongchao
-Port 333
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
