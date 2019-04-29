@@ -50,7 +50,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git symfony2 sudo colored-man)
+plugins=(git symfony2 sudo go)
 
 # User configuration
 
@@ -86,6 +86,7 @@ export HUB=/$HOME/code/github
 export LAB=/$HOME/code/gitlab
 export WD=/$HOME/code/gitlab/WebDev
 export DEPLOY=/$HOME/git/deploy/trunk/dev
+export GOPATH=$HOME/code/test/go
 
 # history lines and time
 export HISTTIMEFORMAT='%F %T '
@@ -139,8 +140,8 @@ alias hosts='sudo vim /etc/hosts'
 alias -s php=vim
 
 alias pfix='php-cs-fixer fix --rules=@Symfony'
-alias pcs='$HOME/code/github/PHP_CodeSniffer/bin/phpcs'
-alias pcbf='$HOME/code/github/PHP_CodeSniffer/bin/phpcbf'
+alias pcs='phpcs'
+alias pcbf='phpcbf'
 
 # alias ag='ag --php'
 
@@ -157,6 +158,7 @@ alias rst='sudo service nginx restart; sudo service php7.1-fpm restart'
 alias cjs='cd /home/teddy/git/oms; php app/console assets:install web --env dev && php app/console assetic:dump --env dev; cd -'
 
 alias update='php $HOME/code/github/gitlab_project/bin/init.php'
+alias upd='php $HOME/code/github/gitlab_project/bin/init.php WebDev'
 
 #mysql
 

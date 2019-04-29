@@ -35,3 +35,11 @@ Port 333
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/id_rsa
 
+# gitlab(hongchao@mafengwo.com)
+Host gitlab_mfw
+HostName ssh.gitlab.mfwdev.com
+User git
+Port 333
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/mfw_rsa
+

@@ -8,7 +8,7 @@ Plug 'gmarik/Vundle.vim'
 " 工程树状图
 Plug 'scrooloose/nerdtree'
 " 文件类型图标
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " 快捷注释
 Plug 'scrooloose/nerdcommenter'
