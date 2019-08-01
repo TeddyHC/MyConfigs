@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # personal export
 #--------------------------------------------------------------------
 
-export OMS=/home/$USER/git/oms
+export CODE=/mnt/d/code
 export IMG_DIR=/Data/webapps/img
 export DEPLOY=/home/dev/svn/deploy/trunk/dev
 
