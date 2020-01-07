@@ -57,7 +57,7 @@ plugins=(z git autojump symfony2 sudo go zsh-syntax-highlighting zsh-autosuggest
 #当前目录
 PROMPT='[%F{green}%n@%m:%~%f]>'
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/hongchao/Library/Python/3.7/bin:/Applications/Julia-1.0.app/Contents/Resources/julia/bin/"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Users/Hongchao/.composer/vendor/bin:/Users/hongchao/Library/Python/3.7/bin:/Applications/Julia-1.0.app/Contents/Resources/julia/bin/"
 # export LD\_LIBRARY\_PATH="$HOME/.linuxbrew/lib:$LD\_LIBRARY\_PATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,9 +86,9 @@ HIST_STAMPS="yyyy-mm-dd"
 
 export HUB=/$HOME/code/github
 export LAB=/$HOME/code/gitlab
-export WD=/$HOME/code/gitlab/WebDev
-export DEPLOY=/$HOME/git/deploy/trunk/dev
-export GOPATH=$HOME/code/test/go
+export FW=/$HOME/code/gitlab/firewall
+export GOPATH=$HOME/code/go
+export PATH=$PATH:${GOPATH//://bin:}/bin
 
 # history lines and time
 export HISTTIMEFORMAT='%F %T '
@@ -152,15 +152,13 @@ alias pcbf='phpcbf'
 #--------------------------------------------------------------------
 
 alias errlog="tail -f /tmp/log_* /tmp/allsqls.log /tmp/slowsqls.log /tmp/exception_* /var/log/nginx/error.log /var/log/php7.1-fpm.log"
-
 alias rst='sudo service nginx restart; sudo service php7.1-fpm restart'
-
 
 #cleancache
 alias cjs='cd /home/teddy/git/oms; php app/console assets:install web --env dev && php app/console assetic:dump --env dev; cd -'
 
 alias update='php $HOME/code/github/gitlab_project/bin/init.php'
-alias upd='php $HOME/code/github/gitlab_project/bin/init.php WebDev'
+alias upd='php $HOME/code/github/gitlab_project/bin/init.php firewall'
 
 #mysql
 

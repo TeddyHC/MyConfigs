@@ -27,19 +27,17 @@ Port 333
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/mfw_rsa
 
-#ssh.console.ab(hongchao@mafengwo.com)
-Host mfw_docker
-HostName ssh.console.ab
-User hongchao
-Port 333
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/id_rsa
-
-# gitlab(hongchao@mafengwo.com)
-Host gitlab_mfw
-HostName ssh.gitlab.mfwdev.com
+# 360 gitlab(hongchao1@360.cn)
+Host gitlab_360
+HostName git.corp.qihoo.net
 User git
-Port 333
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
+IdentityFile ~/.ssh/360_rsa
+
+# 360 gitlab(hongchao1@360.cn)
+Host gitlab8_360
+HostName v.src.corp.qihoo.net
+User git
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/360_rsa
 

@@ -9,7 +9,6 @@
 ### 通用
 - WeChat
 - QQ
-- 企业微信
 - EverNote
 - 有道词典
 - QQ音乐
@@ -18,8 +17,9 @@
 
 ### 开发
 - iTerm2
-- phpStorm
+- VSCode
 - Navicat
+- Sequel Pro
 
 ### 娱乐
 - steam
@@ -30,6 +30,7 @@
 
 ### brew
 - git -C "$(brew --repo homebrew/core)" fetch --unshallow
+- brew install wget vim zsh-autosuggestions autojump thefuck
 
 ### zsh
 - Oh My Zsh
@@ -40,6 +41,5 @@
 - vim8
 - curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-- YouCompleteMe ycm_server_python_interpreter 注意下python版本，目前只有python2(2.7+) 能用
 
 
