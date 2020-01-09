@@ -89,8 +89,9 @@ Plug 'FooSoft/vim-argwrap'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-pathogen'
 
-" go语言支持
+" 语言支持
 Plug 'fatih/vim-go'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " sftp
 Plug 'eshion/vim-sync'

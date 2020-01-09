@@ -30,16 +30,25 @@
 
 ### brew
 - git -C "$(brew --repo homebrew/core)" fetch --unshallow
+- brew tap beeftornado/rmtree
+
+### brew 软件/应用
 - brew install wget vim zsh-autosuggestions autojump thefuck
+- brew install tree cloc glances the_silver_searcher
+- brew install cmake go php composer php-cs-fixer mycli docker-compose
+- brew cask install docker switchhosts dash julia
 
 ### zsh
 - Oh My Zsh
 - ln -s $HOME/code/github/MyConfigs/zsh/zshrc.mac $HOME/.zshrc
-- rezshrc
+- git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+- git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+- source ~/.zshrc
 
 ### vim
-- vim8
 - curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+- ln -s $HOME/code/github/MyConfigs/vim/vimrc.mac $HOME/.vimrc
+- ln -s $HOME/code/github/MyConfigs/vim/vimrc.plug $HOME/.vim/.vimrc.plug
 
 

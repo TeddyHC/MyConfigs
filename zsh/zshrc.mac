@@ -180,4 +180,4 @@ alias htop='glances'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /Users/hongchao/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
