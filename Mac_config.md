@@ -21,6 +21,10 @@
 - Navicat
 - Sequel Pro
 
+####
+- TablePlus
+- Medis
+
 ### 娱乐
 - steam
 - 射手影音（App store）

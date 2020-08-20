@@ -90,7 +90,7 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-pathogen'
 
 " 语言支持
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'JuliaEditorSupport/julia-vim'
 
 " sftp
