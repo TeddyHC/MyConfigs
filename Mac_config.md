@@ -38,7 +38,7 @@
 - brew install wget vim zsh-autosuggestions autojump thefuck
 - brew install tree cloc glances the_silver_searcher
 - brew install cmake go php composer php-cs-fixer mycli docker-compose
-- brew cask install docker switchhosts dash julia
+- brew install --cask docker switchhosts dash julia
 
 ### zsh
 - [Oh My Zsh](https://ohmyz.sh/)
