@@ -10,34 +10,29 @@ HostName 140.143.33.202
 User teddy
 Port 22
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/huolala_rsa
 
-# Bitbucket(teddy.hongchao@gmail.com)
-Host bitbucket
-HostName bitbucket.org
+Host huolala_hk
+HostName git.easygroup.co
 User git
 Port 22
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/huolala_rsa
 
-Host mfw_code
-HostName 172.18.8.41
-User hongchao
-Port 333
+Host huolala_dev
+HostName 192.168.146.88
+User teddy.hong
+Port 56358
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/mfw_rsa
+IdentityFile ~/.ssh/huolala_rsa
 
-# 360 gitlab(hongchao1@360.cn)
-Host gitlab_360
-HostName git.corp.qihoo.net
+# huolala gitlab(teddy.hong@huolala.cn)
+Host gitlab_huolala
+ServerAliveInterval 600
+TCPKeepAlive yes
+IPQoS=throughput
+HostName gitlab.huolala.cn
 User git
 PubkeyAuthentication yes
-IdentityFile ~/.ssh/360_rsa
-
-# 360 gitlab(hongchao1@360.cn)
-Host gitlab8_360
-HostName v.src.corp.qihoo.net
-User git
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/360_rsa
+IdentityFile ~/.ssh/huolala_rsa
 

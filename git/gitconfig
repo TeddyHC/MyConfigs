@@ -1,6 +1,7 @@
 [core]
     excludesfile = /Users/hongchao/.gitignore_global
     editor = vim
+	# compression = -1
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
     path = 
@@ -28,7 +29,12 @@
     st = status
     b = branch
     cp = cherry-pick
+    di = diff
 
 [user]
     name = hongchao
     email = teddy.hongchao@gmail.com
+[http]
+	; postBuffer = 1048576000
+[pull]
+	rebase = false

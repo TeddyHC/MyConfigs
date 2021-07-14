@@ -206,6 +206,7 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gbk
 set fileencoding=utf-8
 
+
 "窗口分割时,进行切换的按键热键需要连接两次,非常麻烦,现在重映射为<c-k>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -464,6 +465,8 @@ set matchtime=1
 
 "光标移动到buffer的顶部和底部时保持3行距离
 set scrolloff=15
+
+let g:snipMate = { 'snippet_version' : 1 }
 
 "高亮显示普通txt文件（需要txt.vim脚本）
 "au BufRead,BufNewFile *  setfiletype txt

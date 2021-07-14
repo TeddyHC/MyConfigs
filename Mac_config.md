@@ -8,11 +8,9 @@
 
 ### 通用
 - WeChat
-- QQ
 - [有道云笔记](http://note.youdao.com/)
 - 有道词典
 - QQ音乐
-- 迅雷
 
 ### Develop Tools
 - [iTerm2](https://www.iterm2.com/) (terminal)
@@ -38,7 +36,7 @@
 - brew install wget vim zsh-autosuggestions autojump thefuck
 - brew install tree cloc glances the_silver_searcher
 - brew install cmake go php composer php-cs-fixer mycli docker-compose
-- brew install --cask docker switchhosts dash julia
+- brew install --cask docker switchhosts dash julia snipaste
 
 ### zsh
 - [Oh My Zsh](https://ohmyz.sh/)
