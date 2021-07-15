@@ -4,35 +4,3 @@ HostName github.com
 User git
 IdentityFile ~/.ssh/id_rsa
 
-# tencentCloud(teddy.hongchao@gmail.com)
-Host tencentCloud
-HostName 140.143.33.202
-User teddy
-Port 22
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/huolala_rsa
-
-Host huolala_hk
-HostName git.easygroup.co
-User git
-Port 22
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/huolala_rsa
-
-Host huolala_dev
-HostName 192.168.146.88
-User teddy.hong
-Port 56358
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/huolala_rsa
-
-# huolala gitlab(teddy.hong@huolala.cn)
-Host gitlab_huolala
-ServerAliveInterval 600
-TCPKeepAlive yes
-IPQoS=throughput
-HostName gitlab.huolala.cn
-User git
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/huolala_rsa
-
