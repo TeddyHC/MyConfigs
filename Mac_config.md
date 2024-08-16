@@ -10,18 +10,19 @@
 - WeChat
 - [有道云笔记](http://note.youdao.com/)
 - [Notion](https://www.notion.so/)
+- [Snipaste](https://www.snipaste.com/index.html)
 - 有道词典
 - QQ音乐
 
 ### Develop Tools
 - [iTerm2](https://www.iterm2.com/) (terminal)
 - [VSCode](https://code.visualstudio.com/)
-- Navicat (mysql)
+- [IDE](https://www.jetbrains.com/toolbox-app/)
+- Sequel Ace (mysql)
 - [Sequel Pro](http://www.sequelpro.com/) (mysql)
 - [Robo 3T](https://www.robomongo.org/) (mongodb)
-- [Medis](http://getmedis.com/) (redis)
+- [Redis Insight](https://redis.io/insight/) (redis)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- TablePlus
 
 ### 娱乐
 - steam
