@@ -9,6 +9,7 @@
 ### 通用
 - WeChat
 - [有道云笔记](http://note.youdao.com/)
+- [Notion](https://www.notion.so/)
 - 有道词典
 - QQ音乐
 
@@ -29,6 +30,7 @@
 ## 设置
 
 ### brew
+- [brew](https://brew.sh/)
 - git -C "$(brew --repo homebrew/core)" fetch --unshallow
 - brew tap beeftornado/rmtree
 
